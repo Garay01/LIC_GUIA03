@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejemplo de Bootstrap</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <a class="navbar-brand" href="#">
+        <i class="fa fa-user" aria-hidden="true"></i>
+        GarayAlvarado
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarsExampleDefault"
+        aria-controls="navbarsExampleDefault"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#"
+              >Inicio<span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="">Complementaria 1</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Complementaria 2</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <div class="container">
+        <h1 class="display-3">Saludos, desde Jumbotron!</h1>
+        <p class="lead">
+          Se presenta un saludo tipo banner desde este elemento
+        </p>
+        <hr class="my-4" />
+        <p>Bootstrap utiliza: Font Awesome, Popper.js &amp; jQuery.</p>
+        <p class="lead">
+          <a
+            class="btn btn-secondary btn-lg"
+            href=""
+            target="_blank"
+            role="button"
+            >Mi ejemplo!</a
+          >
+        </p>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- Example row of columns -->
+      <div class="bc-icons-2">
+        <ol class="breadcrumb cyan lighten-4">
+          <li class="breadcrumb-item">
+            <a class="black-text" href="#">Practica 02</a
+            ><i class="fa fa-angle-left mx-2" aria-hidden="true"></i>
+          </li>
+          <li class="breadcrumb-item">
+            <a class="black-text" href="#">Parte II</a
+            ><i class="fa fa-angle-left mx-2" aria-hidden="true"></i>
+          </li>
+          <li class="breadcrumb-item active">Bootstrap</li>
+        </ol>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="container">
+            <div class="row">
+              <div class="col-12">
+                <h6 class="text-muted">Lista de usuarios</h6>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Roberto Ramírez</li>
+                  <li class="list-group-item">Antonio Rudiger</li>
+                  <li class="list-group-item">Donald Sánchez</li>
+                  <li class="list-group-item">Julio García</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- /.col -->
+          <div class="progress">
+            <div
+              class="progress-bar progress-bar-striped progress-bar-animated"
+              role="progressbar"
+              aria-valuemin="0"
+              aria-valuemax="100"
+            >
+              Actualizando usuarios - 100%
+            </div>
+          </div>
+          <br />
+          <nav>
+            <ul class="pagination pag2">
+              <li class="page-item">
+                <a class="page-link" href="./14"><</a>
+              </li>
+              <li class="page-item"><a class="page-link" href="./1">1</a></li>
+              <li class="page-item"><a class="page-link" href="./2">2</a></li>
+              <li class="page-item"><a class="page-link" href="./3">3</a></li>
+              <li class="page-item"><a class="page-link" href="./4">4</a></li>
+              <li class="page-item"><a class="page-link" href="./4">5</a></li>
+              <li class="page-item disabled">
+                <a class="page-link" href="#">...</a>
+              </li>
+              <li class="page-item"><a class="page-link" href="./50">10</a></li>
+              <li class="page-item">
+                <a class="page-link" href="./16">></a>
+              </li>
+            </ul>
+          </nav>
+          <!-- /.col -->
+        </div>
+        <!-- /.col-md-6 -->
+
+        <div class="col-md-6">
+          <div class="card card-outline-secondary">
+            <div class="card-header">
+              <h3 class="mb-0">Información de usuario</h3>
+            </div>
+            <div class="card-body">
+              <div class="alert alert-danger" role="alert">
+                <strong>Error!</strong>
+                Complete el formulario, ejemplo de alerta.
+              </div>
+              <form autocomplete="off" class="form" role="form">
+                <div class="form-group row">
+                  <label class="col-lg-3 col-form-label form-control-label"
+                    >Primer nombre</label
+                  >
+                  <div class="col-lg-9">
+                    <input class="form-control" type="text" value="Bryan" />
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="col-lg-3 col-form-label form-control-label"
+                    >Apellido</label
+                  >
+                  <div class="col-lg-9">
+                    <input class="form-control" type="text" value="Garay" />
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="col-lg-3 col-form-label form-control-label"
+                    >Email</label
+                  >
+                  <div class="col-lg-9">
+                    <input
+                      class="form-control"
+                      type="email"
+                      value="ejemplo@gmail.com"
+                    />
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="col-lg-3 col-form-label form-control-label"
+                    >Siguiente Clase</label
+                  >
+                  <div class="col-lg-9">
+                    <select class="form-control" id="materia" size="0">
+                      <option value="LIC">(Lun-07:00am) LIC</option>
+                      <option value="DPS">(Lun-09:00) DPS</option>
+                      <option value="SIO">(Lun-05:25) SIO</option>
+                      <option value="DPSL">(Mie-07:00) DPS Lab</option>
+                      <option value="SIOL">(Vie-07:00) SIO Lab</option>
+                      <option selected="selected" value="LICL">
+                        (Vie-09:00) LIC Lab
+                      </option>
+                      <option value="IRD">(Sab-07:00) IRD</option>
+                      <option value="IRDL">(GMT-01:15) IRD Lab</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="col-lg-3 col-form-label form-control-label"
+                    >Contraseña</label
+                  >
+                  <div class="col-lg-9">
+                    <input
+                      class="form-control"
+                      type="password"
+                      value="11111122333"
+                    />
+                    <small class="form-text text-muted" id="passwordHelpBlock"
+                      >Su contraseña debe ser entre 8-20 caracteres, contener
+                      letras y números, caracteres especiales, o
+                      emoticonos.</small
+                    >
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="col-lg-3 col-form-label form-control-label"
+                    >Confirmación</label
+                  >
+                  <div class="col-lg-9">
+                    <input
+                      class="form-control"
+                      type="password"
+                      value="11111122333"
+                    />
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label
+                    class="col-lg-3 col-form-label form-control-label"
+                  ></label>
+                  <div class="col-lg-9">
+                    <input
+                      class="btn btn-secondary"
+                      type="reset"
+                      value="Cancel"
+                    />
+                    <input
+                      class="btn btn-primary"
+                      type="button"
+                      value="Save Changes"
+                    />
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <!-- /.col -->
+        </div>
+        <!-- /.col-md-6 -->
+      </div>
+      <!-- /.row -->
+
+      <hr />
+
+      <footer>
+        <p>&copy; Geek Smarter 2017</p>
+      </footer>
+    </div>
+    <!-- /.container -->
+  </body>
+</html>

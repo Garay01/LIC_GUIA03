@@ -1,0 +1,438 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap");
+* {
+  --color-red: #c2060f;
+  --color-blue: #1b8dcc;
+  --color-yellow: #fbec21;
+}
+*,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 3em;
+  max-width: 1080px;
+}
+nav img {
+  height: 100px;
+}
+
+nav ul {
+  list-style: none;
+  display: none;
+}
+
+@media screen and (min-width: 769px) {
+  nav ul {
+    display: flex;
+  }
+  nav > div {
+    display: none !important;
+  }
+}
+
+nav > div {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+nav .menu_btn_container {
+  width: 30px;
+  height: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+nav .menu_btn_container div {
+  width: 100%;
+  height: 10%;
+  background-color: #333;
+}
+
+nav ul li {
+  margin: 0 2em;
+}
+
+nav .search {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0.2em 0.8em;
+  margin: 0 1em;
+  border-left: 1px solid #333;
+  border-right: 1px solid #333;
+}
+
+nav a {
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+
+nav .search img {
+  color: #333;
+  height: 100%;
+  margin: 0;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+header section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+header section div {
+  background-color: var(--color-red);
+  border-radius: 5px;
+  padding: 2px;
+}
+
+header section button {
+  background-color: transparent;
+  padding: 0.7em 5em;
+  font-weight: 700;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+header section button:first-of-type {
+  background-color: white;
+  color: black;
+}
+
+header {
+  padding-bottom: 2em;
+  padding: 2em 0;
+}
+#main,
+#content,
+#partners {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2em 0;
+}
+#main {
+  background-color: rgba(27, 101, 164, 0.3);
+  background-image: url("https://images.unsplash.com/photo-1522404419647-18cb51cc5c7a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=660&q=80");
+  background-size: cover;
+  background-blend-mode: color-dodge;
+}
+
+main #gameweek {
+  padding: 0 2em;
+  /* background-color: var(--color-blue); */
+}
+
+.glass {
+  background-color: rgba(27, 141, 204, 0.3);
+  background-image: url("https://images.unsplash.com/photo-1522404419647-18cb51cc5c7a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=660&q=80");
+  background-size: 150% 100%;
+  background-position: 60% 0;
+  background-blend-mode: color-dodge;
+  position: relative;
+  z-index: 1;
+  border-radius: 5px;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+}
+.glass:before {
+  width: 100%;
+  height: 100%;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background: inherit;
+  box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.2);
+  filter: blur(10px);
+}
+
+.related-content {
+  display: none;
+}
+main .video {
+  position: relative;
+  z-index: 1;
+  background-color: rgba(27, 101, 164, 0.1);
+}
+
+main #gameweek .video img {
+  width: 100%;
+  height: 300px;
+  mix-blend-mode: overlay;
+  object-fit: cover;
+  z-index: 20;
+}
+
+main #gameweek .video .before {
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(-90deg, var(--color-yellow), var(--color-blue));
+  bottom: 2px;
+  z-index: -1;
+}
+
+.text {
+  padding: 2em 1em;
+}
+
+.text h2 {
+  font-size: 1.4em;
+  /* color: #0d5f94; */
+  color: #c2060f;
+}
+
+.text p,
+.related-content li {
+  color: #333;
+  padding: 1em 0;
+  font-size: 0.85em;
+  line-height: 2em;
+  font-weight: lighter;
+}
+.text span {
+  font-size: 0.7em;
+  padding: 0.5em 1em;
+  background: var(--color-red);
+  border-radius: 3em;
+  color: white;
+}
+
+@media screen and (min-width: 769px) {
+  main #gameweek .video img {
+    height: 100%;
+  }
+  .split {
+    display: flex;
+  }
+  #main #gameweek .video .before {
+    width: 3px;
+    height: 100%;
+    bottom: initial;
+    top: 0;
+    right: 0;
+    background: linear-gradient(var(--color-yellow), var(--color-blue));
+  }
+  .related-content {
+    display: block;
+    padding: 1em 0;
+    margin-bottom: 1em;
+  }
+  .related-content strong {
+    font-size: 0.8em;
+    color: #c2060f;
+  }
+  .related-content ul {
+    list-style: none;
+    padding: 1em;
+  }
+  .related-content li {
+    list-style: none;
+    padding: 0;
+  }
+}
+@media screen and (min-width: 1080px) {
+  #gameweek {
+    max-width: 1080px;
+  }
+}
+
+#news {
+  margin: 1em 0;
+  padding: 0 2em;
+}
+
+@media screen and (min-width: 769px) {
+  #news {
+    display: flex;
+    justify-content: space-between;
+  }
+  section#patterns {
+    display: flex;
+    justify-content: center;
+  }
+  #news .news__item {
+    width: calc(50% - 10px);
+  }
+}
+@media screen and (min-width: 1080px) {
+  #news,
+  section#patterns > div,
+  .news {
+    max-width: 1080px;
+  }
+}
+.news__item {
+  margin: 1em 0;
+  background-color: rgba(27, 141, 204, 0.3);
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+  background-image: url("https://images.unsplash.com/photo-1522404419647-18cb51cc5c7a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=660&q=80");
+  display: flex;
+  background-size: 200% 400%;
+  background-position: 40% 100%;
+  background-blend-mode: color-dodge;
+}
+.news__item:nth-child(2) {
+  background-size: 350% 600%;
+}
+.news__item .news__img,
+.news__item > img {
+  width: 35%;
+  position: relative;
+  object-fit: cover;
+}
+.news__item .news__img > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.news__item .news__img .before {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(-90deg, var(--color-yellow), var(--color-blue));
+  bottom: -3px;
+  z-index: -1;
+}
+
+.news__content {
+  flex: 1;
+  padding: 1em;
+}
+.news__title {
+  padding: 2em 1em 0;
+  font-size: 0.8em;
+  text-transform: uppercase;
+  color: #c2060f;
+  font-style: italic;
+}
+
+.news__text {
+  padding-top: 0.5em;
+}
+.news__text p {
+  padding: 0;
+  margin: 0;
+}
+
+#patterns {
+  width: 100%;
+  padding: 1em 5em;
+  background-color: #fafafa;
+}
+#patterns .descriptor {
+  font-weight: lighter;
+  font-size: 1.2em;
+  flex: 1;
+  text-align: center;
+  font-style: italic;
+  margin-right: 2em;
+}
+#patterns > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#patterns img {
+  width: 20%;
+  margin-right: 2em;
+}
+
+#content h2,
+#partners h2 {
+  margin: 0 2rem;
+  padding-bottom: 0.5em;
+  color: #333;
+  box-shadow: 0 9px 0 -8px #333;
+}
+
+.news {
+  padding: 1em 2em;
+}
+#content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#content .news .news__item {
+  background: none;
+  box-shadow: none;
+}
+@media screen and (min-width: 769px) {
+  #content .news {
+    display: flex;
+    justify-content: space-between;
+  }
+  #content .news .news__item {
+    display: block;
+    width: calc(33% - 10px);
+  }
+  #content .news .news__item img,
+  #content .news .news__img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+  }
+  #content .news .news__title {
+    padding: 1em 0;
+  }
+  #content .news .news__text {
+    padding: 0;
+  }
+  .news__item .news__img .before {
+    display: block;
+  }
+}
+#partners img {
+  width: 100%;
+  margin: 2em 0;
+}
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1080px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2em;
+}
+footer strong {
+  font-size: 0.9em;
+}
+footer div {
+  padding: 1em 5em;
+}
+
+footer div a {
+  font-size: 0.8em;
+  font-weight: lighter;
+  color: #333;
+  text-decoration: none;
+}
+footer div span {
+  font-weight: bold;
+  margin: 0 0.5em;
+}
+footer img {
+  max-width: 100px;
+  margin: 2em 1em 0;
+}
